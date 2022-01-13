@@ -14,4 +14,33 @@ code {
 
 /* App */
 
+.App-root {
+  /* background-color: aqua; */
+  height: 100vh;
+}
 
+/* Nav */
+
+.Nav-root {
+  height: 7vh;
+  background-color: rgb(223, 221, 221);
+}
+
+/* content of the app */
+
+.app-content {
+  height: 93vh;
+  background-color:rgb(200, 200, 200);
+}
+
+/* home */
+
+.Home-root {
+  background-color: royalblue;
+  height: 100%;
+}
+
+.CreateBlog-root {
+  background-color: rgb(210, 240, 170);
+  height: 100%;
+}
