@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Quicksand';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,35 +12,66 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5da2df;
+  /* zoom: 1.2; */
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+
 /* App */
 
 .App-root {
-  /* background-color: aqua; */
   height: 100vh;
+  max-width: 900px;
+  margin: auto;
 }
+  
 
-/* Nav */
+/* Navbar */
 
 .Nav-root {
-  height: 7vh;
-  background-color: rgb(223, 221, 221);
+  height: 10vh;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  border-bottom: #b5b5b5 solid 1px;
 }
 
-/* content of the app */
+.Nav-title {
+  align-self: center;
+  width: 70%;
+  color: #5da2df;
+}
+
+.Nav-links {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+
+}
+
+
+
+/* content of the app  - what is not in the navbar */
 
 .app-content {
   height: 93vh;
-  background-color:rgb(200, 200, 200);
 }
 
 /* home */
 
 .Home-root {
-  background-color: royalblue;
   height: 100%;
 }
 
 .CreateBlog-root {
-  background-color: rgb(210, 240, 170);
   height: 100%;
 }
+

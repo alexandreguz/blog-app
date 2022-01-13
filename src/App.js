@@ -6,16 +6,16 @@ import CreateBlog from './components/CreateBlog.js'
 const App = () => {
   return (
     <BrowserRouter>
-         <div className="App-root">
-            <Navbar />
-            <div className='app-content'>
-              <Routes>
-                 <Route path="/home" element={ <Home />} />
-                 <Route path="/createblog" element={ <CreateBlog /> } />
-              </Routes>
-
+        <div className="App-root">
+          <Navbar />
+          <div className='app-content'>
+            <Routes>
+               <Route path="/" element={ <Home />} />
+               <Route path="/home" element={ <Home />} />
+               <Route path="/createblog" element={ <CreateBlog /> } />
+            </Routes>
+          </div>
         </div>
-      </div>
     </BrowserRouter>
   );
 }
