@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Home from "./components/Home";
 import CreateBlog from './components/CreateBlog.js'
+import NotFound from "./components/NotFound";
 
 const App = () => {
   return (
@@ -10,9 +11,10 @@ const App = () => {
           <Navbar />
           <div className='app-content'>
             <Routes>
-               <Route path="/" element={ <Home />} />
-               <Route path="/home" element={ <Home />} />
-               <Route path="/createblog" element={ <CreateBlog /> } />
+               <Route exact path="/" element={ <Home />} />
+               <Route exact path="/home" element={ <Home />} />
+               <Route exact path="/createblog" element={ <CreateBlog /> } />
+               <Route path="*" element={ <NotFound />} />
             </Routes>
           </div>
         </div>
