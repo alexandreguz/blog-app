@@ -38,6 +38,14 @@ const CreateBlog = (props) => {
     setEnteredAuthor('');
     setEnteredSubject('');
     setEnteredContent('');
+
+    fetch("http://localhost:8000/blogs/", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(blogData)
+    }).then(res => res.json());
   }
 
     return (

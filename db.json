@@ -17,6 +17,19 @@
       "title": "Cool blog",
       "body": "Leaning React witha bit of back-end. Tnnkwnkwncwkwknc",
       "author": "Sara"
+    },
+    {
+      "title": "My posted blog",
+      "body": "Leaning React with a bit of back-end. First posted ",
+      "author": "Nathan",
+      "id": 4
+    },
+    {
+      "title": "Tora",
+      "author": "Natan",
+      "subject": "Today",
+      "content": "tatatat tatatta tatta",
+      "id": 5
     }
   ]
 }
