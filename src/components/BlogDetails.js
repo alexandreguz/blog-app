@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 const BlogDetails = () => {
     console.log(useParams())
-    //get id from url using distructure in "useParams"
     const { id } = useParams()
 
     const [blog, setBlog] = useState([])

@@ -2,77 +2,25 @@ import { useState } from "react";
 
 const CreateBlog = (props) => {
 
-  // This way update the state for each field separatelly:
   const [enteredTitle, setEnteredTitle] = useState('')
   const [enteredAuthor, setEnteredAuthor] = useState('')
   const [enteredSubject, setEnteredSubject] = useState('')
   const [enteredContent, setEnteredContent] = useState('')
-
-  // -v -> This way update the state for all fields together with an object:
-    //  const [blogInput, setBlogInput] = useState({
-    //   enteredTitle: '',
-    //   enteredAuthor: '',
-    //   enteredSubject: '',
-    //   enteredContent: ''
-    //  })
-
-
-
-
-  // const addBlog = (blogObject) =>
-  //   fetch("http://localhost:8000/blogs/", {
-  //       method: 'POST',
-  //       headers: {
-  //           'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify(blogObject)
-  //   }).then(res => res.json());
   
   const titleChangeHandler = (event) => {
-     setEnteredTitle(event.target.value) //-> state from each field separatelly
-    
-    // -v -> this work but is bad practice 
-    // setBlogInput({
-    //   ...blogInput,
-    //   enteredTitle: event.target.value
-    // })
-
-    // -v -> passing a function to update the state
-      // setBlogInput((prevState) => {
-      //   return {...prevState, enteredTitle: event.target.value}
-      // });
+     setEnteredTitle(event.target.value) 
   }
 
   const authorChangeHandler = (event) => {
-     setEnteredAuthor(event.target.value) //-> state from each field separatelly
-    
-    // -v -> this work but is bad practice 
-    // setBlogInput({
-    //   ...blogInput,
-    //   enteredAuthor: event.target.value
-    // })
+     setEnteredAuthor(event.target.value) 
   }
 
   const subjectChangeHandler = (event) => {
-     setEnteredSubject(event.target.value) //-> state from each field separatelly
-    
-    // -v -> this work but is bad practice 
-    // setBlogInput({
-    //   ...blogInput,
-    //   enteredSubject: event.target.value
-    // })
-    
+     setEnteredSubject(event.target.value) 
   }
 
   const contentChangeHandler = (event) => {
-     setEnteredContent(event.target.value) //-> state from each field separatelly
-    
-    // -v -> this work but is bad practice 
-    // setBlogInput({
-    //   ...blogInput,
-    //   enteredContent: event.target.value
-    // })
-
+     setEnteredContent(event.target.value)
   }
 
   const submitHandler = (event) => {

@@ -7,10 +7,6 @@ import BlogDetails from "./components/BlogDetails";
 
 const App = () => {
 
-  // this is a customized function to receive data from the child to the parent
-  // this is the same idea from taking data from html components to our components
-  // we create a function (customized) that will run in the component child
-  // inside the component father. In this case runs in CreateBlog component inside the App component
   const saveBlogDataHandler = (enteredBlogData) => {
     const blogData ={
       ...enteredBlogData,
