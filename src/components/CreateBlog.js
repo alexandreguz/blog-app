@@ -5,7 +5,7 @@ const CreateBlog = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('')
   const [enteredAuthor, setEnteredAuthor] = useState('')
   const [enteredSubject, setEnteredSubject] = useState('')
-  const [enteredContent, setEnteredContent] = useState('')
+  const [enteredBody, setEnteredBody] = useState('')
   
   const titleChangeHandler = (event) => {
      setEnteredTitle(event.target.value) 
@@ -19,8 +19,8 @@ const CreateBlog = (props) => {
      setEnteredSubject(event.target.value) 
   }
 
-  const contentChangeHandler = (event) => {
-     setEnteredContent(event.target.value)
+  const bodyChangeHandler = (event) => {
+     setEnteredBody(event.target.value)
   }
 
   const submitHandler = (event) => {
@@ -30,14 +30,14 @@ const CreateBlog = (props) => {
       title: enteredTitle,
       author: enteredAuthor,
       subject: enteredSubject,
-      content: enteredContent
+      body: enteredBody
     }
     console.log(blogData);
     props.onSaveBlogData(blogData);
     setEnteredTitle('');
     setEnteredAuthor('');
     setEnteredSubject('');
-    setEnteredContent('');
+    setEnteredBody('');
 
     fetch("http://localhost:8000/blogs/", {
         method: 'POST',
@@ -68,7 +68,7 @@ const CreateBlog = (props) => {
             <br/>
             <label for="blog-content">Blog Content</label>
             <br/>
-            <textarea required id="blog-content" rows="4" cols="50" value={enteredContent} onChange={contentChangeHandler}/>
+            <textarea required id="blog-content" rows="4" cols="50" value={enteredBody} onChange={bodyChangeHandler}/>
             <br/>
             <button type="submit">Submit</button>
           </form>
