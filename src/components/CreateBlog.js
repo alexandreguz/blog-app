@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CreateBlog = () => {
+const CreateBlog = (props) => {
 
   // This way update the state for each field separatelly:
   const [enteredTitle, setEnteredTitle] = useState('')
@@ -85,6 +85,7 @@ const CreateBlog = () => {
       content: enteredContent
     }
     console.log(blogData);
+    props.onSaveBlogData(blogData);
     setEnteredTitle('');
     setEnteredAuthor('');
     setEnteredSubject('');
